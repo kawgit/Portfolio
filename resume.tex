@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Kenneth Wilber} \\ \vspace{1pt}
+    \small 
+    Greenwich, CT $|$ 203-564-6079\\
+    kawgit56@gmail.com $|$
+    \underline{https://kennethwilber.us} $|$
+    \underline{https://github.com/kawgit} $|$
+    \underline{https://linkedin.com/in/kenneth-wilber} \\
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Boston University}{Boston, MA}
+      {Bachelor of Arts in Computer Science (GPA: 3.8)}{Expected May 2027}
+    \resumeSubheading
+      {Case Western Reserve University}{Cleveland, OH}
+      {Bachelor of Science in Computer Science (GPA: 3.9)}{Transferred}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {DragonGC}{Apr. 2024 -- Aug. 2025 (two summers)}
+      {Software Engineering Summer Intern}{Greenwich, CT}
+      \resumeItemListStart
+        \resumeItem{Built and scaled \textbf{distributed, AI-powered pipelines} to process SEC filings (10-K, 10-Q, S-1, DEF 14A, 8-K) \textbf{into structured, searchable data} using LLM-driven NLP parsing with QA systems for public company lawyers and capital markets compliance teams.}
+        \resumeItem{Strengthened platform reliability by developing \textbf{end-to-end automated tests} that measured error rates across large datasets. Implemented heuristics that reduced tagging errors and improved accuracy.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Chess.com}{May 2022 -- Aug. 2023 (two summers)}
+      {Software Engineering Summer Intern}{Remote}
+      \resumeItemListStart
+        \resumeItem{\textbf{Optimized the world’s 2nd strongest chess engine} (Torch) by designing \textbf{sparse neural network inference improvements}, boosting inference speed 20\% and \textbf{cutting scaling costs} (100\% network growth → 35\% cost increase) \textbf{enabling the use of much larger models}.}
+        \resumeItem{\textbf{Built core C++ modules} for Chess.com’s AI Chess Coach to detect advanced board patterns, powering coaching features \textbf{used by tens of millions of players}. Created \textbf{unit tests to ensure correctness} and long-term reliability.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Small Language Model} $|$ \emph{Python, PyTorch, Weights \& Biases, HuggingFace}}{}
+      \resumeItemListStart
+        \resumeItem{Developed a custom transformer-based language model \textbf{from scratch with PyTorch}, trained on Harry Potter and Fineweb-Edu, featuring a byte pair encoding tokenizer with a novel deduplication scheme.}
+        \resumeItem{Integrated training tracking with Weights \& Biases for benchmarking and \textbf{experimented with new architectures including GQA sliding window attention, and Muon-inspired optimizer algorithm changes}, cutting the training time by half.}
+        \resumeItem{\href{https://github.com/kawgit/Athena}{\underline{Source Code}}}
+      \resumeItemListEnd
+    
+    \resumeProjectHeading
+      {\textbf{Chess Engine} $|$ \emph{JavaScript, C++, CMake, HTML, CSS}}{}
+      \resumeItemListStart
+        \resumeItem{Designed a lightweight chess engine using bitboards, alpha-beta pruning, and selective search heuristics in C++.}
+        \resumeItem{Implemented a simplified JavaScript version with an HTML / CSS web interface.}
+        \resumeItem{\href{https://kawgit.github.io/Vision-JS/index.html}{\underline{Demo}} $|$ \href{https://github.com/kawgit/Vision-Chess}{\underline{Source Code (C++ Version)}} $|$ \href{https://github.com/kawgit/Vision-Chess-JS}{\underline{Source Code (JS Version)}}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Video-Based Point Cloud Generator} $|$ \emph{Python, OpenCV}}{}
+      \resumeItemListStart
+        \resumeItem{Implemented a \textbf{computer vision} pipeline to reconstruct 3D point clouds from video footage.}
+        \resumeItem{\href{https://github.com/kawgit/slam}{\underline{Source Code}}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{3D Model Renderer} $|$ \emph{JavaScript, HTML, CSS}}{}
+      \resumeItemListStart
+        \resumeItem{Built a 3D graphics renderer from scratch by rasterizing triangles directly to the screen without external libraries.}
+        \resumeItem{\href{https://kawgit.github.io/3D-Model-Renderer/index.html}{\underline{Demo}} $|$ \href{https://github.com/kawgit/3D-Model-Renderer}{\underline{Source Code}}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, C++, Java, SQL, Svelte, Node.js, Bash} \\
+     \textbf{ML/AI}{: Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Distributed Systems, Clustering} \\
+     \textbf{Libraries}{: PyTorch, NumPy, Matplotlib, OpenCV} \\
+     \textbf{Developer Tools}{: Linux, Docker, Git, W\&B, Vercel, VS Code, CI/CD} \\
+     \textbf{Other}{: Data Visualization, Statistics, Linear Algebra, GPU Acceleration (CUDA, MPS)}
+    }}
+ \end{itemize}
+
+\end{document}
