@@ -98,6 +98,9 @@ function App() {
                 <a href="mailto:kawgit56@gmail.com" className="social-btn primary-btn">
                   Get in Touch
                 </a>
+                <a href="/resume.pdf" target="_blank" rel="noreferrer" className="social-btn secondary-btn">
+                  View Resume
+                </a>
               </div>
             </div>
 
